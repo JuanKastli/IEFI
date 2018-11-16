@@ -99,7 +99,7 @@ Partial Class ClientesForm
         Me.IdProvinciaComboBox.FormattingEnabled = True
         Me.IdProvinciaComboBox.Location = New System.Drawing.Point(95, 113)
         Me.IdProvinciaComboBox.Name = "IdProvinciaComboBox"
-        Me.IdProvinciaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.IdProvinciaComboBox.Size = New System.Drawing.Size(177, 21)
         Me.IdProvinciaComboBox.TabIndex = 24
         '
         'ClientesForm

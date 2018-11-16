@@ -38,6 +38,7 @@ Partial Class ClientesGrid
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdProvinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nomprovincia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.ClientesCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +52,7 @@ Partial Class ClientesGrid
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn, Me.nomprovincia})
         Me.DataGridView1.DataSource = Me.ClientesCollectionBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 55)
@@ -145,6 +146,7 @@ Partial Class ClientesGrid
         Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
         Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
         Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Width = 70
         '
         'NombreDataGridViewTextBoxColumn
         '
@@ -152,6 +154,7 @@ Partial Class ClientesGrid
         Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
         Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
         Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 300
         '
         'IdProvinciaDataGridViewTextBoxColumn
         '
@@ -159,6 +162,15 @@ Partial Class ClientesGrid
         Me.IdProvinciaDataGridViewTextBoxColumn.HeaderText = "IdProvincia"
         Me.IdProvinciaDataGridViewTextBoxColumn.Name = "IdProvinciaDataGridViewTextBoxColumn"
         Me.IdProvinciaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdProvinciaDataGridViewTextBoxColumn.Width = 70
+        '
+        'nomprovincia
+        '
+        Me.nomprovincia.DataPropertyName = "nomprovincia"
+        Me.nomprovincia.HeaderText = "nomprovincia"
+        Me.nomprovincia.Name = "nomprovincia"
+        Me.nomprovincia.ReadOnly = True
+        Me.nomprovincia.Width = 300
         '
         'ClientesGrid
         '
@@ -186,8 +198,9 @@ Partial Class ClientesGrid
     Friend WithEvents Eliminar As ToolStripButton
     Friend WithEvents Salir As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ClientesCollectionBindingSource As BindingSource
     Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdProvinciaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ClientesCollectionBindingSource As BindingSource
+    Friend WithEvents nomprovincia As DataGridViewTextBoxColumn
 End Class

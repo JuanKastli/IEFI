@@ -37,7 +37,7 @@ Public Class ClientesCollection
         Dim MiCliente As ClienteClass
 
 
-        ObjBaseDatos.objTabla = "Cliente"
+        ObjBaseDatos.objTabla = "Clientes"
         MiDataTable = ObjBaseDatos.TraerTodo
 
         For Each dr As DataRow In MiDataTable.Rows
@@ -58,7 +58,7 @@ Public Class ClientesCollection
 
         Dim ObjBasedeDato As New BaseDatoClass
         'busca la tabla
-        ObjBasedeDato.objTabla = "Cliente"
+        ObjBasedeDato.objTabla = "Clientes"
 
         Dim vsql As New StringBuilder
 
@@ -89,7 +89,7 @@ Public Class ClientesCollection
 
         'Instancio el el Objeto BaseDatoClass para acceder al la base productos.
         Dim objBaseDatos As New BaseDatoClass
-        objBaseDatos.objTabla = "Cliente"
+        objBaseDatos.objTabla = "Clientes"
 
         For Each Cliente In ClienteList
             'Ejecuta el método base eliminar.
@@ -116,7 +116,7 @@ Public Class ClientesCollection
 
         'Instancio el el Objeto BaseDatosClass para acceder al la base productos.
         Dim objBaseDatos As New BaseDatoClass
-        objBaseDatos.objTabla = "Cliente"
+        objBaseDatos.objTabla = "Clientes"
 
         Dim vSQL As New StringBuilder
         Dim vResultado As Boolean = False

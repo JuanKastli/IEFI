@@ -31,11 +31,13 @@
             IdProvinciaCombo_ = value
         End Set
     End Property
+
     Private Sub Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancelar.Click
 
         Me.Close()
 
     End Sub
+
     Private Sub Aceptar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Aceptar.Click
 
         MiCliente.Nombre = NombreTextBox.Text
@@ -59,7 +61,6 @@
 
                 ClientesGrid.DataGridView1.Refresh()
 
-
         End Select
 
         Me.Close()
@@ -67,9 +68,13 @@
 
     Private Sub ClienteForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         'De donde traigo los datos
-        IdProvinciaComboBox.DataSource = ClienteList.TraerTodo
+        'IdProvinciaComboBox.DataSource = ClienteList.TraerTodo
+        IdProvinciaComboBox.DataSource = ProvinciaList.TraerProvincia
+
         'Los valores que quiero mostrar
-        IdProvinciaComboBox.DisplayMember = "Nombre"
+        'IdProvinciaComboBox.DisplayMember = "Nombre" No existe la columna nombre en ProvinciasList
+        IdProvinciaComboBox.DisplayMember = "Provincia"
+
         IdProvinciaComboBox.ValueMember = "Id"
 
         IdProvinciaComboBox.SelectedValue = idprovincia

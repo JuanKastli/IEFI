@@ -1,6 +1,6 @@
 ﻿
 Imports System.ComponentModel
-    Imports System.Text
+Imports System.Text
 
 Public Class ProvinciasCollection
 
@@ -10,8 +10,6 @@ Public Class ProvinciasCollection
         MyBase.OnAddingNew(e)
         e.NewObject = New ProvinciaClass
     End Sub
-
-
 
     ''' <summary>
     ''' Trae todos las Articulos.
@@ -27,7 +25,7 @@ Public Class ProvinciasCollection
         Dim MiCliente As ProvinciaClass
 
 
-        ObjBaseDatos.objTabla = "Provincia"
+        ObjBaseDatos.objTabla = "Provincias"
         MiDataTable = ObjBaseDatos.TraerTodo
 
         For Each dr As DataRow In MiDataTable.Rows
@@ -42,11 +40,12 @@ Public Class ProvinciasCollection
         Return Me
 
     End Function
+
     Public Sub InsertarProvincia(ByVal MiCliente As ProvinciaClass)
 
         Dim ObjBasedeDato As New BaseDatoClass
         'busca la tabla personas 
-        ObjBasedeDato.objTabla = "Cliente"
+        ObjBasedeDato.objTabla = "Provincias"
 
         Dim vsql As New StringBuilder
 
@@ -61,7 +60,7 @@ Public Class ProvinciasCollection
 
         'Evalúa el resultado del comando SQL.
         If MiCliente.Id = 0 Then
-            MsgBox("No fue posible agregar el Cliente ")
+            MsgBox("No fue posible agregar la Provincia")
             Exit Sub
         End If
 
@@ -73,7 +72,7 @@ Public Class ProvinciasCollection
 
         'Instancio el el Objeto BaseDatoClass para acceder al la base.
         Dim objBaseDatos As New BaseDatoClass
-        objBaseDatos.objTabla = "Provincia"
+        objBaseDatos.objTabla = "Provincias"
 
         For Each Cliente In ClienteList
             'Ejecuta el método base eliminar.
@@ -100,13 +99,12 @@ Public Class ProvinciasCollection
 
         'Instancio el el Objeto BaseDatosClass para acceder al la base productos.
         Dim objBaseDatos As New BaseDatoClass
-        objBaseDatos.objTabla = "Provincia"
+        objBaseDatos.objTabla = "Provincias"
 
         Dim vSQL As New StringBuilder
         Dim vResultado As Boolean = False
 
         vSQL.Append("Provincia='" & MiCliente.Provincia & "'")
-
 
         'Actualizo la tabla personas con el Id.
         Dim resultado As Boolean
@@ -129,4 +127,5 @@ Public Class ProvinciasCollection
         Me.Items.Item(Me.FindCore(myProperty, MiCliente.Id)) = MiCliente
 
     End Sub
+
 End Class

@@ -38,4 +38,18 @@
 
         End Set
     End Property
+
+    Dim nomprovincia_ As String
+    Public ReadOnly Property nomprovincia() As String
+        Get
+            For Each Provincia In ProvinciaList
+                If Provincia.Id = IdProvincia_ Then
+                    nomprovincia_ = Provincia.Provincia
+                    Exit For
+                End If
+            Next
+            Return nomprovincia_
+        End Get
+    End Property
+
 End Class
