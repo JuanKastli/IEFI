@@ -2,6 +2,8 @@
     Dim Id_ As Integer
     Dim Nombre_ As String
     Dim IdProvincia_ As Integer
+    Dim Fecha_ As String
+    Dim Saldo_ As String
 
     Public Property Id() As Integer
         Get
@@ -51,5 +53,26 @@
             Return nomprovincia_
         End Get
     End Property
+    Public Property Fecha() As String
+        Get
+            Return Fecha_
 
+        End Get
+        Set(ByVal value As String)
+
+            Fecha_ = value
+
+        End Set
+    End Property
+    Public Property Saldo() As String
+        Get
+            Return Saldo_
+
+        End Get
+        Set(ByVal value As String)
+
+            Saldo_ = value
+
+        End Set
+    End Property
 End Class

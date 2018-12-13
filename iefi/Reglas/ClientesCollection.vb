@@ -46,6 +46,8 @@ Public Class ClientesCollection
             MiCliente.Id = CInt(dr("Id"))
             MiCliente.Nombre = dr("Nombre")
             MiCliente.IdProvincia = CInt(dr("IdProvincia"))
+            MiCliente.Fecha = dr("Fecha")
+            MiCliente.Saldo = dr("Saldo")
 
             Me.Add(MiCliente)
         Next
@@ -63,11 +65,15 @@ Public Class ClientesCollection
         Dim vsql As New StringBuilder
 
         vsql.Append("(Nombre")
-        vsql.Append(", IdProvincia)")
+        vsql.Append(", IdProvincia")
+        vsql.Append(", Fecha")
+        vsql.Append(",Saldo)")
 
         vsql.Append(" VALUES ")
 
         vsql.Append("('" & MiCliente.Nombre & "'")
+        vsql.Append(", '" & MiCliente.Fecha & "'")
+        vsql.Append(",'" & MiCliente.Saldo & "'")
         vsql.Append(", '" & MiCliente.IdProvincia & "')")
 
         MiCliente.Id = ObjBasedeDato.Insertar(vsql.ToString)
@@ -123,6 +129,8 @@ Public Class ClientesCollection
 
         vSQL.Append("Nombre='" & MiCliente.Nombre & "'")
         vSQL.Append(",IdProvincia='" & MiCliente.IdProvincia.ToString & "'")
+        vSQL.Append(",Fecha='" & MiCliente.Fecha.ToString & "'")
+        vSQL.Append(",Saldo='" & MiCliente.Saldo.ToString & "'")
 
         'Actualizo la tabla personas con el Id.
         Dim resultado As Boolean

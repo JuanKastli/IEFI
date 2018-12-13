@@ -2,7 +2,7 @@
 
     Private Sub ClienteGrid_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        'ClienteCollectionBindingSource.DataSource = ClienteList.InsertarCliente - este método solo se usa para agregar un nuevo cliente.
+
         ClientesCollectionBindingSource.DataSource = ClienteList.TraerTodo
         'Se debe llenar la ProvinciaList para que lo muestre en la grilla.
         ProvinciaList.TraerProvincia()
@@ -21,6 +21,8 @@
 
         ClientesForm.IdTextBox.Text = ClienteList.Item(fila).Id
         ClientesForm.NombreTextBox.Text = ClienteList.Item(fila).Nombre
+        ClientesForm.FechaTextBox.Text = ClienteList.Item(fila).Fecha
+        ClientesForm.TextBox2.Text = ClienteList.Item(fila).Saldo
         'Falto la inicialización de la propiedad IdProvincia de ClientesForm para que
         'el combo del Form se sleccione en el item de provincia que corresponde.
         ClientesForm.idprovincia = ClienteList.Item(fila).IdProvincia
@@ -93,4 +95,7 @@
 
     End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 End Class
