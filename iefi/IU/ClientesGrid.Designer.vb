@@ -25,6 +25,7 @@ Partial Class ClientesGrid
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClientesGrid))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.nomprovincia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.Agregar = New System.Windows.Forms.ToolStripButton()
@@ -34,11 +35,10 @@ Partial Class ClientesGrid
         Me.Eliminar = New System.Windows.Forms.ToolStripButton()
         Me.Salir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdProvinciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nomprovincia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientesCollectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.ClientesCollectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,68 +55,81 @@ Partial Class ClientesGrid
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.IdProvinciaDataGridViewTextBoxColumn, Me.nomprovincia})
         Me.DataGridView1.DataSource = Me.ClientesCollectionBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 55)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 68)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(689, 207)
+        Me.DataGridView1.Size = New System.Drawing.Size(919, 254)
         Me.DataGridView1.TabIndex = 2
+        '
+        'nomprovincia
+        '
+        Me.nomprovincia.DataPropertyName = "nomprovincia"
+        Me.nomprovincia.HeaderText = "nomprovincia"
+        Me.nomprovincia.Name = "nomprovincia"
+        Me.nomprovincia.ReadOnly = True
+        Me.nomprovincia.Width = 300
         '
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
+        Me.ToolStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(40, 40)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.Agregar, Me.ToolStripSeparator2, Me.Modificar, Me.ToolStripSeparator3, Me.Eliminar, Me.Salir, Me.ToolStripSeparator4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(689, 55)
+        Me.ToolStrip1.Size = New System.Drawing.Size(919, 68)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 68)
         '
         'Agregar
         '
         Me.Agregar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Agregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Agregar.Image = CType(resources.GetObject("Agregar.Image"), System.Drawing.Image)
         Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Agregar.Name = "Agregar"
-        Me.Agregar.Size = New System.Drawing.Size(62, 52)
+        Me.Agregar.Size = New System.Drawing.Size(75, 65)
         Me.Agregar.Text = "Agregar"
         Me.Agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 68)
         '
         'Modificar
         '
         Me.Modificar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Modificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Modificar.Image = CType(resources.GetObject("Modificar.Image"), System.Drawing.Image)
         Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Modificar.Name = "Modificar"
-        Me.Modificar.Size = New System.Drawing.Size(70, 52)
+        Me.Modificar.Size = New System.Drawing.Size(85, 65)
         Me.Modificar.Text = "Modificar"
         Me.Modificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 55)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 68)
         '
         'Eliminar
         '
         Me.Eliminar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Eliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Eliminar.Image = CType(resources.GetObject("Eliminar.Image"), System.Drawing.Image)
         Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(61, 52)
+        Me.Eliminar.Size = New System.Drawing.Size(75, 65)
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -124,21 +137,18 @@ Partial Class ClientesGrid
         '
         Me.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.Salir.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Salir.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Salir.Image = CType(resources.GetObject("Salir.Image"), System.Drawing.Image)
         Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(44, 52)
+        Me.Salir.Size = New System.Drawing.Size(46, 65)
         Me.Salir.Text = "Salir"
         Me.Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 55)
-        '
-        'ClientesCollectionBindingSource
-        '
-        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 68)
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -164,21 +174,18 @@ Partial Class ClientesGrid
         Me.IdProvinciaDataGridViewTextBoxColumn.ReadOnly = True
         Me.IdProvinciaDataGridViewTextBoxColumn.Width = 70
         '
-        'nomprovincia
+        'ClientesCollectionBindingSource
         '
-        Me.nomprovincia.DataPropertyName = "nomprovincia"
-        Me.nomprovincia.HeaderText = "nomprovincia"
-        Me.nomprovincia.Name = "nomprovincia"
-        Me.nomprovincia.ReadOnly = True
-        Me.nomprovincia.Width = 300
+        Me.ClientesCollectionBindingSource.DataSource = GetType(iefi.ClientesCollection)
         '
         'ClientesGrid
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(689, 262)
+        Me.ClientSize = New System.Drawing.Size(919, 322)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ClientesGrid"
         Me.Text = "ClientesGrid"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

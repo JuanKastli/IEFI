@@ -10,7 +10,7 @@ Public Class BaseDatoClass
 
     'La cadena de conexión es incorrecta.
     'Dim CadenaConexion As String = "Data Source=.\SQLEXPRESS; DataBase=productos; User=sa; Password="
-    Dim CadenaConexion As String = "Data Source=.\SQLEXPRESS; DataBase=iefi; User=sa; Password=carena"
+    Dim CadenaConexion As String = "Data Source=.\SQLEXPRESS; DataBase=iefi; User=sa; Password="
 
     'Instaciamos un objeto SqlConnection pasando como parámetro la cadena
     Dim objConexion As New SqlConnection(CadenaConexion)

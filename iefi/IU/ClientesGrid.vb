@@ -41,8 +41,8 @@
             Exit Sub
         End If
 
-        ClientesForm.Text = "Modificar Rubro"
-        ClientesForm.Label1.Text = "Modificar Rubro"
+        ClientesForm.Text = "Modificar Cliente"
+        ClientesForm.Label1.Text = "Modificar Cliente"
         ClientesForm.operacion = "Modificar"
         ClientesForm.indice = DataGridView1.CurrentRow.Index
 
